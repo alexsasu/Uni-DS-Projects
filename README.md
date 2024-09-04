@@ -15,7 +15,7 @@ Our project made use of a scientific dataset that we found online, containing de
 We observed that our dataset is imbalanced. In order to address this, we used <b>balanced weights</b> with some of our models, and we kept track of the <b>f1-score</b>.
 
 ![pca_dataset_visualization_initial](https://github.com/user-attachments/assets/62758e61-ed32-412f-a223-a7625b84098d)  
-We observed that most of the bean types had similar features, with the exception of Bombay beans, which were considerably different. Due to this, and also due to the Bombay population having by far the least amount of samples, we omitted Bombay beans from the process of <b>outliers removal</b> through the <b>z-score</b>.
+We observed that most of the bean types had similar features, with the exception of Bombay beans, which were considerably different. Due to this, we omitted Bombay beans from the process of <b>outliers removal</b> through the <b>z-score</b> method applied on the entire dataset. We also chose not to remove any samples from the Bombay class, as it already had the least amount of samples by far.
 
 <img src="https://github.com/user-attachments/assets/eb0adecb-3b23-45f0-9e17-bca492baf379" width="766" height="645">  
 
@@ -23,8 +23,8 @@ From the above correlation matrix, we observed that the dimension features of th
 </details>
 
 Before using the dimensionality reduction techniques on our data, we first preprocessed it in the following ways:
-- we first standardized it (through a **standard scaler**, in order to obtain mean 0 and variance 1 for the dimensionality reduction methods)
-- and then we **removed outliers** (through the **z-score** method, by eliminating data points that were at least 3 standard deviations away from the mean)
+- we first **removed outliers** through the **z-score** method, by eliminating data points that were at least 3 standard deviations away from the mean
+- and then we standardized it through a **standard scaler**, in order to obtain mean 0 and variance 1 for the dimensionality reduction methods
 
 <details>
 <summary>Afterwards, we applied two <b>feature extraction</b> methods on our processed data, and one <b>feature selection</b> method, namely <b>Principal Component Analysis (PCA)</b>, <b>Linear Discriminant Analysis (LDA)</b>, and <b>Lasso variable selection property (LVS)</b>:</summary>
@@ -48,7 +48,7 @@ For the method involving the Lasso variable selection property, we observed from
 </details>
 
 <details>
-<summary>And then, we fed the reduced data, as well as the data without any dimensionality reduction methods applied, to the following machine learning models trained from zero through a <b>Grid Search</b> approach: <b>Logistic Regression</b>, <b>KNN</b>, <b>Random Forest</b>, <b>SVM</b>, <b>Naive Bayes</b>; and obtained the following results:</summary>
+<summary>And then, we fed the reduced data, as well as the data without any dimensionality reduction methods applied, to the following machine learning models trained from the ground through a <b>Grid Search</b> approach: <b>Logistic Regression</b>, <b>KNN</b>, <b>Random Forest</b>, <b>SVM</b>, <b>Naive Bayes</b>; and obtained the following results:</summary>
 
 ![image](https://github.com/user-attachments/assets/fa0bc8d7-0f98-4746-ac49-e88d4e740881)
 
