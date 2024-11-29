@@ -61,8 +61,8 @@ As can be seen from the above two tables, the dimensionality reduction methods w
 > Note: for further details about the project solution, please consult [this path](https://github.com/alexsasu/Uni-DS-Projects/tree/main/Dry%20Beans%20Multiclass%20Classification/Documentation) inside the repository
 
 ### Contributors:
-- Alexandru-Cristian Sasu (https://github.com/alexsasu)
-- Dragos-Gabriel Grigore (https://github.com/Dragos-Grigore)
+- [Alexandru-Cristian Sasu](https://github.com/alexsasu)
+- [Dragos-Gabriel Grigore](https://github.com/Dragos-Grigore)
 - Georgiana Plaian
-- Sabin Zibileanu
+- [Sabin Zibileanu](https://github.com/SabinZibileanu)
 - Sebastian-Marian Barbu
